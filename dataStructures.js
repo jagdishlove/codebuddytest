@@ -7,8 +7,30 @@ arry.filter(n=>n%2!==0);
 
 // 2. Replace all the vowels in a string with uppercase vowels.
 
-const string= 'Elie';
-string.replace(/[aeiou]/gi,'')
+function conVowUpp(str) {
+    // Stores the length
+    // of str
+    var N = str.length;
+
+    for (var i = 0; i < N; i++) {
+      if (
+        str[i] === "a" ||
+        str[i] === "e" ||
+        str[i] === "i" ||
+        str[i] === "o" ||
+        str[i] === "u"
+      ) {
+        document.write(str[i].toUpperCase());
+      } else {
+        document.write(str[i]);
+      }
+    }
+  }
+
+  // Driver Code
+   
+  var str = "Elie";
+  conVowUpp(str);
 
 
 // 3. Write a function to find the maximum number in an array.
@@ -56,42 +78,7 @@ const str = "a:2,b:3,c:4,a:5,b:6";
 const parseObj = eval('({'+str+'})');
 
 
-// Write a function in Javascript to print the sum of the first n fibonacci numbers.
 
-const fib = (n) =>{
-    if(n==1){
-     return [0,1];   
-    }
-    else{
-        var arr=fib(n-1);
-        arr.push(arr[arr.length-1]+arr[arr.length-2]);
-        return arr;
-    }
-};
 
-console.log(fib(6))
-
-// Normalize the following object to an array of objects.
-
-const data = {
-    liked: [
-      { id: 1, name: "John Doe", age: 20 },
-      { id: 2, name: "Jane Doe", age: 30 },
-      { id: 3, name: "John Smith", age: 40 }
-    ],
-    disliked: [
-      { id: 4, name: "Jason Doe", age: 20 },
-      { id: 5, name: "Josh Doe", age: 30 },
-      { id: 6, name: "Karen Smith", age: 40 }
-    ],
-    loved: [
-      { id: 7, name: "Jasmine Doe", age: 20 },
-      { id: 8, name: "Bob Doe", age: 30 },
-      { id: 9, name: "Tom Smith", age: 40 }
-    ]
-  }
-
-const newData=[];
-newData.push(data)
 
 

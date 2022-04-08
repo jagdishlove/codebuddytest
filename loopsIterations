@@ -1,1 +1,27 @@
 // level {1/2/3}
+
+
+// Write a function in Javascript to print the sum of the first n fibonacci numbers.
+
+function calculateSum(n)
+{
+    let fibo = [];
+    if (n <= 0)
+    return 0;
+ 
+    fibo[0] = 0;
+    fibo[1] = 1;
+ 
+    // Initialize result
+    let sum = fibo[0] + fibo[1];
+ 
+    // Add remaining terms
+    for(let i = 2; i <= n; i++)
+    {
+        fibo[i] = fibo[i - 1] +
+                    fibo[i - 2];
+        sum += fibo[i];
+    }
+ 
+    return sum;
+}
